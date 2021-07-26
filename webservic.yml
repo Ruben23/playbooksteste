@@ -1,0 +1,11 @@
+- name: "web service"
+  hosts: all
+  tasks:
+    - name: "web service"
+      uri:
+       url: http://172.16.0.98:9083/bfweb/services/WZ1_ws
+       method: POST
+       body: "{{ lookup('file','WZ1_ws.xml') }}"
+       body_format: text/xml
+       headers:
+        Content-Type: "Content-Type: text/xml"
