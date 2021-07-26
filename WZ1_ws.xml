@@ -1,0 +1,65 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservices.bankfusion.trapedza.com" xmlns:att="http://www.misys.com/bankfusion/attributes" xmlns:head="http://www.misys.com/eqf/types/header">
+   <soapenv:Header>
+      <web:bfgenericsoapheader>
+         <!--Optional:-->
+         <web:authentication>
+            <web:userName>sgib</web:userName>
+            <web:password>sgib</web:password>
+            <!--Optional:-->
+            <web:passCode></web:passCode>
+            <!--Optional:-->
+            <web:userLocator></web:userLocator>
+           <!--Optional:-->
+            <web:casRestletUrl></web:casRestletUrl>
+            <!--Optional:-->
+            <web:casValidateUrl></web:casValidateUrl>
+         </web:authentication>
+         <web:BFHeader>
+            <!--Optional:-->
+            <att:correlationID></att:correlationID>
+            <!--Optional:-->
+            <att:zone></att:zone>
+            <att:autoAuthorize></att:autoAuthorize>
+            <!--Optional:-->
+            <att:extension/>
+         </web:BFHeader>
+      </web:bfgenericsoapheader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <web:WZB_MF2>
+         <web:wzbmf2_in>
+            <ServiceHeader>
+
+            </ServiceHeader>
+            <ServiceData>
+               <!--Optional:-->
+               <paymentType>X01</paymentType>
+               <payNetAmount>100</payNetAmount>
+               <receiveACBranch>1001</receiveACBranch>
+               <!--Optional:-->
+               <receiveACNumber>041674</receiveACNumber>
+               <!--Optional:-->
+               <receiveACSuffix>001</receiveACSuffix>
+               <!--Optional:-->
+               <orderingCustomerAccountNumber>000810010004167400144</orderingCustomerAccountNumber>
+               <orderingCustomerNameAddress1>Josymar Lima</orderingCustomerNameAddress1>
+               <!--Optional:-->
+               <externalPaymentReference>IBREF</externalPaymentReference>
+               <detailsOfPayment1>TESTEWZB</detailsOfPayment1>
+               <!--Optional:-->
+               <detailsOfPayment2>TESTE2</detailsOfPayment2>
+               <!--Optional:-->
+               <paymentPurpose>12</paymentPurpose>
+               <!--Optional:-->
+               <beneficiaryACOan1>000200000620950410162</beneficiaryACOan1>
+               <!--Optional:-->
+               <beneficiaryNameAddress1Bad1>Josymar Lima</beneficiaryNameAddress1Bad1>
+               <!--Optional:-->
+               <applicationCodeFxMmSwClMsCpIr>CP</applicationCodeFxMmSwClMsCpIr>
+               <inputBranch>2000</inputBranch>
+               <!--Optional:-->
+            </ServiceData>
+         </web:wzbmf2_in>
+      </web:WZB_MF2>
+   </soapenv:Body>
+</soapenv:Envelope>
